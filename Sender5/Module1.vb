@@ -27,8 +27,10 @@
         Else
             MainForm.rtbDisplay.SelectionColor = Color.Blue
         End If
-        MainForm.rtbDisplay.AppendText(instr & vbCrLf)
-        MainForm.rtbDisplay.AppendText(vbCrLf)
-        MainForm.rtbDisplay.ScrollToCaret()
+        With MainForm.rtbDisplay
+            .AppendText(instr & vbCrLf)
+            .AppendText(vbCrLf)
+            .ScrollToCaret()
+        End With
     End Sub
 End Module
